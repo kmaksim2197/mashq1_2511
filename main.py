@@ -1,39 +1,22 @@
-# 1-misol
-docs = input("Hujjat topshirilganmi? (ha/yo'q): ").strip().lower()
-interview = input("Suhbatdan o'tdingizmi? (ha/yo'q): ").strip().lower()
-test = input("Testdan o'tdingizmi? (ha/yo'q): ").strip().lower()
-
-if docs == "ha" and interview == "ha" and test == "ha":
-    print("Siz ishga qabul qilindingiz!")
-elif docs == "yo'q":
+hujjat = input("Hujjat topshirdingizmi? (ha/yo'q): ").lower()
+if hujjat != "ha":
     print("Avvalo hujjatlaringizni topshiring.")
-elif docs == "ha" and interview == "yo'q":
-    print("Suhbatdan o'tmagansiz.")
-elif docs == "ha" and interview == "ha" and test == "yo'q":
-    print("Test natijalari yetarli emas.")
 else:
-    print("Jarayon davom etmoqda.")
+    suhbat = input("Suhbatdan o'tdingizmi? (ha/yo'q): ").lower()
+    if suhbat != "ha":
+        print("Suhbatdan o'tmagansiz.")
+    else:
+        test = input("Testdan o'tdingizmi? (ha/yo'q): ").lower()
+        if test != "ha":
+            print("Test natijalari yetarli emas.")
+        else:
+            print("Jarayon davom etmoqda – degan xabar chiqsin.")
+            print("Tabriklaymiz! Siz ishga qabul qilindingiz!")
 
-# 2-misol
-s = input()
-words = s.split()
-code = ""
-for w in words:
-    code += w[0]
-print(code)
+print("Salom bu mening yangi loyiham")
+print("Salom!")
+print("Bugun havo juda chiroyli")
 
-# 3-misol
-words = eval(input())
-
-max1 = ""
-max2 = ""
-
-for w in words:
-    if len(w) > len(max1):
-        max2 = max1
-        max1 = w
-    elif len(w) > len(max2) and w != max1:
-        max2 = w
-
-print("1-chi eng uzun so'z:", max1)
-print("2-chi eng uzun so'z:", max2)
+royxat = [4, 7, 2, 5, 1, 10]
+ma_lumot = [x for x in royxat if x % 2 == 0]
+print(ma_lumot)
